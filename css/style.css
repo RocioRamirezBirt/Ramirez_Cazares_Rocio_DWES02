@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+  --orange:#ff9966;
+  --bg-orange:#FCB18C;
+  --ucla:#2274A5;
+  --bg:#FAFAFA;
+  --font: #494949;
+  --bg-contact:#f9f9f9;
+  --bg-input:#fff;
+  --border:#7C7A7A;
+}
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    vertical-align: baseline;
+  }
+
+  body {
+    background-color: var(--bg-orange);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;   
+    font-size: 12px;
+    line-height: 30px;
+    color: var(--font);
+  }
+
+  #container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    position: relative;
+    border-radius: 10px;
+    background-color: var(--bg)
+  }
+
+  h3 {
+    display: block;
+    font-weight: 400;
+    color: var(--orange);
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  h4{
+    margin: 5px 0 15px;
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  #contact{
+    background: var(--bg-contact);
+    padding: 25px;
+    margin: 50px 0;
+    border: 1px solid lighten(grey, 1%); 
+    border-radius: 10px;
+    box-shadow: 0 19px 50px hsla(0, 0%, 10%, 0.41);
+  }
+
+  fieldset {
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="date"]{
+    width: 100%;
+    border: 1px solid var(--border);
+    background-color: var(--bg-input);
+    margin: 0 0 5px;
+    padding: 15px;
+}
+
+fieldset > label {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+fieldset > input::placeholder{
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--font);
+}
+
+button {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background-color: var(--orange);
+    color: var(--bg-input);
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-size: 1.3rem;
+}
+
+.error{
+  font-size: 0.96rem;
+  color: var(--orange);
+  font-weight: 400;
+}
+
+.detalles {
+  font-size: 1.3rem;
+  color:#777;
+  font-weight: 600;
+}
+
+.d_inbox{
+  width: 95%;
+  display: block;
+  align-items: center;
+  border: 1px solid var(--border);
+  background-color: var(--bg-input);
+  margin: 2px 0 5px 5px;
+  padding: 15px
+}
+
+.footer{
+  color: var(--orange);
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.request > label{
+  display: block;
+  text-align: justify;
+  margin: 15px;
+  text-transform:uppercase;
+  
+}
+
+.request_h3{
+  padding: 15px;
+  text-align: center;
+
+}
+
+.underline{
+  display: inline-block;
+  position: relative;
+}
+
+.underline::after{
+  content: '';
+  position: absolute;
+  width: 55%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--orange);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.8s ease-out;
+}
+
+.underline:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
