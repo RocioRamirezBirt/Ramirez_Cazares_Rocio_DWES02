@@ -15,8 +15,9 @@
             $fechaActualFormat = $fechaActual->format('Y-m-d');
 
             if(isset($_POST["submit"]) && $_SERVER["REQUEST_METHOD"] == "POST"){   
-                $valid = true;
+                $valid = true; //variable para comprobar que no ha habido errores
                 
+                /***********validacion del email******* */
                 if(empty($_POST["email"])){
                     $emailErr = "vacio";
                     $valid = false;
@@ -26,9 +27,9 @@
                     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
                         $emailErr = "Formato de correo Invalido";
                         $valid = false;
-                    }
-                    
+                    }      
                 }
+                // ****************validacion de la fecha *******************/
                 if(empty($_POST['date'])){
                     $dateErr = "No puede estar vacia la fecha";
                     $valid = false;
@@ -46,7 +47,7 @@
                         $valid = false;
                     }
                 }
-                
+                /***********Comprobacion del DNI valido***************/
                 if(empty($_POST["dni"])){
                     $dniErr = "No puede estar vacio el DNI";
                     $valid = false;
