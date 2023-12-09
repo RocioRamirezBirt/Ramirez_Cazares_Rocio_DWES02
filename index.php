@@ -14,7 +14,7 @@
             $fechaActual = new DateTime();
             $fechaActualFormat = $fechaActual->format('Y-m-d');
 
-            if(isset($_POST["submit"]) && $_SERVER["REQUEST_METHOD"] == "POST"){   
+            if(isset($_POST["submit"]) && $_SERVER["REQUEST_METHOD"] == "POST"){   //que no esta vacio y que el metodo usado es post
                 $valid = true; //variable para comprobar que no ha habido errores
                 
                 /***********validacion del email******* */
